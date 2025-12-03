@@ -2,9 +2,10 @@ export default function Home() {
   return (
     <div className="container py-5 mt-3">
       <main>
-        <div className="row justify-content-center">
+        <div className="row">
+          <div className="col-12 col-lg-3 d-flex fs-2 justify-content-lg-end">🌱</div>
           <div className="col-12 col-lg-6 ">
-            <h1>🌱 Welcome to Gisele&apos;s Garden</h1>
+            <h1>Welcome to Gisele&apos;s Garden</h1>
             <p>This is a site that&apos;s a bit less profesh and a bit more where I can ramble and share myself online in a more creative way.</p>
             <p>I&apos;m still in the beginning phases of tending to my garden so come along for the ride.</p>
             <p>Welcome in!</p>
@@ -21,13 +22,13 @@ export default function Home() {
             </ul>
 
             {/* CREATIONS */}
-            {/* <h2 className="about-h2">creations</h2>
+            <h2 className="about-h2">creations</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
-              <li><a href='/cd-shelf'>🚧 film photo gallery</a></li>
-              <li><a href='/cd-shelf'>🚧 fiber arts gallery</a></li>
-              <li><a href='/cd-shelf'>🚧 coding experiments</a></li>
-            </ul> */}
+              <li><a href='/digital-garden/film-photos'>film photo gallery</a></li>
+              {/* <li><a href='/cd-shelf'>🚧 fiber arts gallery</a></li>
+              <li><a href='/cd-shelf'>🚧 coding experiments</a></li> */}
+            </ul>
 
             {/* WRITINGS */}
             {/* <h2 className="about-h2">writings</h2>

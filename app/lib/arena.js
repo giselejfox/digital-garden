@@ -1,7 +1,7 @@
 export async function fetchArenaChannel(slug) {
-  console.log('🌐 Fetching Arena channel:', slug);
-  const url = `https://api.are.na/v2/channels/${slug}`;
-  console.log('📍 URL:', url);
+  // console.log('🌐 Fetching Arena channel:', slug);
+  const url = `https://api.are.na/v2/channels/${slug}?per=100`;
+  // console.log('📍 URL:', url);
   
   const res = await fetch(url, {
     cache: "force-cache",
@@ -17,7 +17,7 @@ export async function fetchArenaChannel(slug) {
   }
   
   const data = await res.json();
-  console.log('✅ Arena API success for', slug, '- items:', data.contents?.length);
+  // console.log('✅ Arena API success for', slug, '- items:', data.contents?.length);
   
   return data; // Return the full data object, not just { contents: data.contents }
 }

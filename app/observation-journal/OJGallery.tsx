@@ -31,7 +31,7 @@ export default function OJGallery({ arena }: GalleryProps) {
   }
 
   return (
-    <div className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap justify-content-center">
       {images.map((block) => (
         <a
           key={block.id}
