@@ -2,15 +2,16 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # deploy when main changes
-  workflow_dispatch:      # allow manual trigger
+    branches:
+      - main      # Trigger on push to main
+  workflow_dispatch: # Optional manual trigger
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -21,12 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Next.js site
+      - name: Build Next.js
         run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          publish_branch: gh-pages
+          publish_dir: ./out          # Next.js static export folder
+          publish_branch: gh-pages    # Branch to deploy to
