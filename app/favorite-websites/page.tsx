@@ -5,6 +5,7 @@ interface ArenaBlock {
     id: number;
     generated_title: string | null;
     description: string | null;
+    source: { url: string };
 }
 
 interface ArenaData {
@@ -19,7 +20,7 @@ export default async function ObservationJournal() {
         return (
             <li key={block.id}>
                 <a
-                    href={block.generated_title || '#'}
+                    href={block.source.url || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
