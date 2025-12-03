@@ -1,51 +1,41 @@
-/* eslint-disable @next/next/no-img-element */
-interface ArenaImage {
-    thumb: { url: string };
-    original: { url: string };
-}
+'use client';
 
-interface ArenaBlock {
-    id: number;
-    title: string | null;
-    generated_title: string | null;
-    image: ArenaImage | null;
-}
+import Image from 'next/image';
 
-interface ArenaData {
-    contents: ArenaBlock[];
-}
-
-interface GalleryProps {
-    arena: ArenaData;
-}
-
+interface ArenaImage { thumb: { url: string }; original: { url: string }; }
+interface ArenaBlock { id: number; title: string | null; generated_title: string | null; image: ArenaImage | null; }
+interface ArenaData { contents: ArenaBlock[]; }
+interface GalleryProps { arena: ArenaData;}
 
 export default function Gallery({ arena }: GalleryProps) {
-    const images = [...arena.contents]
-        .filter((block) => block.image)
-        .reverse();
+  const images = arena.contents
+    .filter((b) => b.image?.thumb?.url && b.image.original?.url)
+    .reverse();
 
-    return (
-        <div>
-            <main>
-                <div className="d-flex flex-wrap">
-                    {images.map((block) => (
-                        <a
-                            key={block.id}
-                            href={block.image!.original.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src={block.image!.thumb.url}
-                                alt={block.title || block.generated_title || ""}
-                                className="px-1 py-1"
-                                style={{ height: "15rem" }}
-                            />
-                        </a>
-                    ))}
-                </div>
-            </main>
-        </div>
-    );
+  return (
+    <div className="d-flex flex-wrap">
+      {images.map((block) => (
+        <a
+          key={block.id}
+          href={block.image!.original.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            position: 'relative',
+            height: '15rem',
+            width: 'auto',
+            flex: '0 0 auto', // prevent shrinking
+            margin: '0.25rem',
+          }}
+        >
+          <Image
+            src={block.image!.thumb.url}
+            alt={block.title || block.generated_title || ''}
+            fill
+            style={{ objectFit: 'contain', width: 'auto', height: '100%' }}
+          />
+        </a>
+      ))}
+    </div>
+  );
 }

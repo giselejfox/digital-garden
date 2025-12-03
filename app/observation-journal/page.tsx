@@ -1,5 +1,5 @@
 import { fetchArenaChannel } from '../lib/arena';
-import Gallery from './OJGallery';
+import OJGallery from './OJGallery';
 import DetailHeader from '../components/DetailHeader';
 
 export default async function ObservationJournal() {
@@ -8,8 +8,11 @@ export default async function ObservationJournal() {
 
     return (
         <div className="container py-5 mt-3">
-            <DetailHeader title="observation journal" subtitle="Photos from my iPhone. Usually of trees, colorful graffiti, the sky, or light." />
-            <Gallery arena={arena} />;
+            <DetailHeader 
+                title="observation journal" 
+                subtitle="Photos from my iPhone. Usually of trees, colorful graffiti, the sky, or light." 
+            />
+            <OJGallery arena={arena} />
         </div>
     )
 }
