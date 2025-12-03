@@ -15,8 +15,8 @@ export default function Home() {
               {/* <li><a href='/cd-shelf'>🚧 cd shelf</a> - where I show you all the CDs I've listened to in totality</li>
               <li><a href='/cd-shelf'>🚧 book shelf</a> - where I talk about my favorite books</li>
               <li><a href='/cd-shelf'>🚧 my favorite clothes</a> - where I brag about my cool clothing</li> */}
-              <li><a href='/favorite-websites'>my favorite websites</a> - where I entice you to click on links</li>
-              <li><a href='/observation-journal'>observation journal</a> - where I show you the world through my iPhone lens</li>
+              <li><a href='/digital-garden/favorite-websites'>my favorite websites</a> - where I entice you to click on links</li>
+              <li><a href='/digital-garden/observation-journal'>observation journal</a> - where I show you the world through my iPhone lens</li>
             </ul>
 
             {/* CREATIONS */} 
