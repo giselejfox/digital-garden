@@ -28,7 +28,7 @@ export default function Home() {
               <li><a href='/cd-shelf'>🚧 coding experiments</a></li>
             </ul> */}
 
-            {/* WRITINGS */}
+            {/* WRITINGS */} 
             {/* <h2 className="about-h2">writings</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
