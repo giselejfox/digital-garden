@@ -12,28 +12,29 @@ export default function Home() {
             <h2 className="about-h2">collections</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
-              <li><a href='/cd-shelf'>cd shelf</a> - where I show you all the CDs I've listened to in totality</li>
-              <li><a href='/cd-shelf'>book shelf</a> - where I talk about my favorite books</li>
-              <li><a href='/cd-shelf'>my favorite clothes</a> - where I brag about my cool clothing</li>
-              <li><a href='/cd-shelf'>my favorite websites</a> - where I entice you to click on links</li>
+              {/* <li><a href='/cd-shelf'>🚧 cd shelf</a> - where I show you all the CDs I've listened to in totality</li>
+              <li><a href='/cd-shelf'>🚧 book shelf</a> - where I talk about my favorite books</li>
+              <li><a href='/cd-shelf'>🚧 my favorite clothes</a> - where I brag about my cool clothing</li> */}
+              <li><a href='/favorite-websites'>my favorite websites</a> - where I entice you to click on links</li>
+              <li><a href='/observation-journal'>observation journal</a> - where I show you the world through my iPhone lens</li>
             </ul>
 
             {/* CREATIONS */}
-            <h2 className="about-h2">creations</h2>
+            {/* <h2 className="about-h2">creations</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
-              <li><a href='/cd-shelf'>film photo gallery</a></li>
-              <li><a href='/cd-shelf'>fiber arts gallery</a></li>
-              <li><a href='/cd-shelf'>coding experiments</a></li>
-            </ul>
+              <li><a href='/cd-shelf'>🚧 film photo gallery</a></li>
+              <li><a href='/cd-shelf'>🚧 fiber arts gallery</a></li>
+              <li><a href='/cd-shelf'>🚧 coding experiments</a></li>
+            </ul> */}
 
             {/* WRITINGS */}
-            <h2 className="about-h2">writings</h2>
+            {/* <h2 className="about-h2">writings</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
-              <li><a href='/cd-shelf'>series of blog posts from my study abroad in Amsterdam</a></li>
-              <li><a href='/cd-shelf'>maybe a blog lives here...</a></li>
-            </ul>
+              <li><a href='/cd-shelf'>🚧 series of blog posts from my study abroad in Amsterdam</a></li>
+              <li><a href='/cd-shelf'>🚧 maybe a blog lives here...</a></li>
+            </ul> */}
 
           </div>
         </div>
