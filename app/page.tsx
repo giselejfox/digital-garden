@@ -6,7 +6,8 @@ export default function Home() {
           <div className="col-12 col-lg-6 ">
             <h1>🌱 Welcome to Gisele&apos;s Garden</h1>
             <p>This is a site that&apos;s a bit less profesh and a bit more where I can ramble and share myself online in a more creative way.</p>
-            <p>Welcome in!</p> 
+            <p>I&apos;m still in the beginning phases of tending to my garden so come along for the ride.</p>
+            <p>Welcome in!</p>
 
             {/* COLLECTIONS */}
             <h2 className="about-h2">collections</h2>
@@ -19,7 +20,7 @@ export default function Home() {
               <li><a href='/digital-garden/observation-journal'>observation journal</a> - where I show you the world through my iPhone lens</li>
             </ul>
 
-            {/* CREATIONS */} 
+            {/* CREATIONS */}
             {/* <h2 className="about-h2">creations</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
@@ -28,7 +29,7 @@ export default function Home() {
               <li><a href='/cd-shelf'>🚧 coding experiments</a></li>
             </ul> */}
 
-            {/* WRITINGS */} 
+            {/* WRITINGS */}
             {/* <h2 className="about-h2">writings</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
@@ -36,6 +37,11 @@ export default function Home() {
               <li><a href='/cd-shelf'>🚧 maybe a blog lives here...</a></li>
             </ul> */}
 
+            {/* WRITINGS */}
+            <h2 className="about-h2">how this site is run</h2>
+            <div className="horizontal-line mb-3"></div>
+            <p>I use are.na as a CMS for most of the pages here. It has a great, simple, API and UX so I can easily upload from my phone or computer. It doesn&apos;t hurt that most of my lists here are simple.</p>
+            <p>Why not just use are.na as the digital garden point blank? Because sometimes I&apos;m going to want to get crafty. Once you have full creative control of a webpage it&apos;s hard to go back.</p>
           </div>
         </div>
       </main>
