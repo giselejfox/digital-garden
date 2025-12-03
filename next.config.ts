@@ -6,12 +6,13 @@ import type { NextConfig } from "next";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",       // <--- THIS makes Next.js produce static HTML + assets
-  images: {
-    unoptimized: true,    // required because next/image optimization requires a server
-  },
-  basePath: "",            // usually empty unless you're hosting at sub-path
+  output: "export",
+  images: { unoptimized: true },
+  basePath: "/digital-garden",       // <-- your repo name
+  assetPrefix: "/digital-garden/",   // <-- for CSS/JS/assets
 };
+
+module.exports = nextConfig;
 
 module.exports = nextConfig;
 
