@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Main About Page */
+
+.landing-page-content > p {
+  margin-bottom: 1rem;
+}
+
+.small-h1 {
+  font-size: 24px;
+  font-style: italic
+}
+
+.homepage-image {
+  height: 10rem;
+  width: auto;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #dddddd;
+  width: 100%;
+}
+
+.about-h2,
+.about-h3 {
+  font-size: 16px;
+}
+
+.about-h2 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.about-h3-link {
+  color: black;
+}
+
+/* Custom Markdown Styling */
+
+.custom-blockquote {
+  background: #f9f9f9;
+  border-style: none none none solid;
+  padding-left: 1rem;
+  border-width: .25rem;
+}
+
+/* When going to a medium sized screen and up */
+@media (min-width: 768px) {
+  .homepage-image {
+    height: 15rem;
+    width: auto; 
+  }
+}
