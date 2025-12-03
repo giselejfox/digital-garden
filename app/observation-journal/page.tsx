@@ -6,6 +6,8 @@ export default async function ObservationJournal() {
     const channel = 'observation-journal-livy8yieymy';
     const arena = await fetchArenaChannel(channel);
 
+    // console.log('ARENA DATA:', arena); // 👈 log the entire object
+
     return (
         <div className="container py-5 mt-3">
             <DetailHeader 
