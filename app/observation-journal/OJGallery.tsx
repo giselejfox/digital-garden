@@ -22,9 +22,13 @@ interface GalleryProps {
 }
 
 export default function OJGallery({ arena }: GalleryProps) {
-  const images = arena.contents
-    .filter((b) => b.image?.thumb?.url && b.image.original?.url)
-    .reverse();
+  const images = arena?.contents
+    ?.filter((b) => b.image?.thumb?.url && b.image.original?.url)
+    .reverse() || [];
+
+  if (images.length === 0) {
+    return <div>No images found</div>;
+  }
 
   return (
     <div className="d-flex flex-wrap">
@@ -35,18 +39,21 @@ export default function OJGallery({ arena }: GalleryProps) {
           target="_blank"
           rel="noopener noreferrer"
           style={{
-            position: 'relative',
-            height: '13rem',
-            width: '10rem',      // Set a fixed width instead of auto
-            // flex: '0 0 auto',
-            // margin: '0.25rem',
+            height: '15rem',
+            flex: '0 0 auto',
+            margin: '0.25rem',
           }}
         >
           <Image
             src={block.image!.thumb.url}
             alt={block.title || block.generated_title || ''}
-            fill
-            style={{ objectFit: 'cover' }}
+            width={240}
+            height={240}
+            style={{ 
+              height: '15rem',
+              width: 'auto',
+              objectFit: 'cover'
+            }}
           />
         </a>
       ))}
