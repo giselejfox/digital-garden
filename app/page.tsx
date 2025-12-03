@@ -4,7 +4,7 @@ export default function Home() {
       <main>
         <div className="row justify-content-center">
           <div className="col-12 col-lg-6 ">
-            <h1>🌱 Welcome to Gisele&apos;s Garden</h1>
+            <h1>🌱 Welcome to Gisele&apos;s Digital Garden</h1>
             <p>This is a site that&apos;s a bit less profesh and a bit more where I can ramble and share myself online in a more creative way.</p>
             <p>Welcome in!</p> 
 
