@@ -19,7 +19,7 @@ export default function Home() {
               <li><a href='/observation-journal'>observation journal</a> - where I show you the world through my iPhone lens</li>
             </ul>
 
-            {/* CREATIONS */}
+            {/* CREATIONS */} 
             {/* <h2 className="about-h2">creations</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
