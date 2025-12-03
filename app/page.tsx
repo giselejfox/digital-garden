@@ -6,7 +6,7 @@ export default function Home() {
           <div className="col-12 col-lg-6 ">
             <h1>🌱 Welcome to Gisele&apos;s Garden</h1>
             <p>This is a site that&apos;s a bit less profesh and a bit more where I can ramble and share myself online in a more creative way.</p>
-            <p>Welcome in!</p>
+            <p>Welcome in!</p> 
 
             {/* COLLECTIONS */}
             <h2 className="about-h2">collections</h2>
