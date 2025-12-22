@@ -21,10 +21,12 @@ interface GalleryProps {
   arena: ArenaData; 
 }
 
+
 export default function OJGallery({ arena }: GalleryProps) {
-  const images = arena?.contents
-    ?.filter((b) => b.image?.thumb?.url && b.image.original?.url)
-    .reverse() || [];
+  const images =
+    arena?.contents
+      ?.filter((b) => b.image?.thumb?.url && b.image.original?.url)
+      .reverse() || [];
 
   if (images.length === 0) {
     return <div>No images found</div>;
@@ -38,22 +40,14 @@ export default function OJGallery({ arena }: GalleryProps) {
           href={block.image!.original.url}
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            height: '15rem',
-            flex: '0 0 auto',
-            margin: '0.25rem',
-          }}
+          className="gallery-item"
         >
           <Image
             src={block.image!.thumb.url}
             alt={block.title || block.generated_title || ''}
-            width={240}
-            height={240}
-            style={{ 
-              height: '15rem',
-              width: 'auto',
-              objectFit: 'cover'
-            }}
+            width={600}
+            height={400}
+            className="gallery-image"
           />
         </a>
       ))}

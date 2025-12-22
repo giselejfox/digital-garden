@@ -25,9 +25,9 @@ export default function Home() {
             <h2 className="about-h2">creations</h2>
             <div className="horizontal-line mb-3"></div>
             <ul>
-              <li><a href='/digital-garden/film-photos'>film photo gallery</a></li>
-              {/* <li><a href='/cd-shelf'>🚧 fiber arts gallery</a></li>
-              <li><a href='/cd-shelf'>🚧 coding experiments</a></li> */}
+              <li><a href='/digital-garden/film-photos'>film photo gallery</a> - where I oscillate between point and shoots and SLRs</li>
+              <li><a href='/digital-garden/fiber-crafts'>fiber arts gallery</a> - where I show you my handmade items</li>
+              {/* <li><a href='/cd-shelf'>🚧 coding experiments</a></li> */} 
             </ul>
 
             {/* WRITINGS */}

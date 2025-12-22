@@ -12,7 +12,7 @@ interface ArenaData {
     contents: ArenaBlock[];
 }
 
-export default async function ObservationJournal() {
+export default async function FavoriteWebsites() {
     const channel = 'favorite-websites-rxkvgeiizge';
     const arena: ArenaData = await fetchArenaChannel(channel);
 

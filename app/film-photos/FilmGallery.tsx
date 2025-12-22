@@ -22,9 +22,10 @@ interface GalleryProps {
 }
 
 export default function FilmGallery({ arena }: GalleryProps) {
-  const images = arena?.contents
-    ?.filter((b) => b.image?.thumb?.url && b.image.original?.url)
-  // .reverse() || [];
+  const images =
+    arena?.contents?.filter(
+      (b) => b.image?.thumb?.url && b.image.original?.url
+    ) || [];
 
   if (images.length === 0) {
     return <div>No images found</div>;
@@ -35,7 +36,7 @@ export default function FilmGallery({ arena }: GalleryProps) {
 
   images.forEach((block) => {
     const title = block.title || block.generated_title || '';
-    const yearMatch = title.match(/\b(19|20)\d{2}\b/); // extract 4-digit year
+    const yearMatch = title.match(/\b(19|20)\d{2}\b/);
     const year = yearMatch ? yearMatch[0] : 'Unknown';
 
     if (!categorized[year]) {
@@ -45,19 +46,19 @@ export default function FilmGallery({ arena }: GalleryProps) {
   });
 
   // Sort years descending
-  const sortedYears = Object.keys(categorized)
-    .sort((a, b) => {
-      if (a === 'Unknown') return 1; // Unknown at the end
-      if (b === 'Unknown') return -1;
-      return Number(b) - Number(a); // descending order
-    });
+  const sortedYears = Object.keys(categorized).sort((a, b) => {
+    if (a === 'Unknown') return 1;
+    if (b === 'Unknown') return -1;
+    return Number(b) - Number(a);
+  });
 
   return (
     <div>
       {sortedYears.map((year) => (
         <div key={year}>
-          <h2 className='about-h2'>{year}</h2>
+          <h2 className="about-h2">{year}</h2>
           <div className="horizontal-line mb-3"></div>
+
           <div className="d-flex flex-wrap justify-content-center">
             {categorized[year].map((block) => (
               <a
@@ -65,22 +66,14 @@ export default function FilmGallery({ arena }: GalleryProps) {
                 href={block.image!.original.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  height: '15rem',
-                  flex: '0 0 auto',
-                  margin: '0.25rem',
-                }}
+                className="gallery-item mb-2"
               >
                 <Image
                   src={block.image!.thumb.url}
                   alt={block.title || block.generated_title || ''}
-                  width={240}
-                  height={240}
-                  style={{ 
-                    height: '15rem',
-                    width: 'auto',
-                    objectFit: 'cover'
-                  }}
+                  width={600}
+                  height={400}
+                  className="gallery-image"
                 />
               </a>
             ))}
