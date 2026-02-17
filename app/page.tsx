@@ -19,6 +19,7 @@ export default function Home() {
               <li><a href='/cd-shelf'>🚧 my favorite clothes</a> - where I brag about my cool clothing</li> */}
               <li><a href='/digital-garden/favorite-websites'>my favorite websites</a> - where I entice you to click on links</li>
               <li><a href='/digital-garden/observation-journal'>observation journal</a> - where I show you the world through my iPhone lens</li>
+              <li><a href='https://giselejfox.notion.site/30a010de863b80e6849cc8591cfeb957?v=30a010de863b80018fc5000c805e74db'>local seattle artists</a> - where I try to get you to buy cool gifts</li>
             </ul>
 
             {/* CREATIONS */}
